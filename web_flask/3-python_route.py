@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Task 3"""
-
+"""
+Task 3: using Flask to create a webpage.
+"""
 from flask import Flask, escape
 
 app = Flask(__name__)
