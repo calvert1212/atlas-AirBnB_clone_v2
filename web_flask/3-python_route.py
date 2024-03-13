@@ -2,7 +2,7 @@
 """
 Task 3: using Flask to create a webpage.
 """
-from flask import Flask, escape
+from flask import Flask
 
 app = Flask(__name__)
 
