@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Task 5"""
 
-from flask import Flask, escape, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
