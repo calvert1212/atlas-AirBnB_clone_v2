@@ -11,12 +11,13 @@ app = Flask(__name__)
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """Display HTML page with list of all State objects in DBStorage by name"""
-    states = sorted(storage.all(State).values(), key=lambda x: x.name)
+    states = storage.all("State").values()
+    states_sorted = sorted(states, key=lambda state: state.name)
     return render_template('7-states_list.html', states=states)
 
 
 @app.teardown_appcontext
-def teardown_session(exception=None):
+def teardown_storage(exception):
     """Closes the database again at the end of the request."""
     storage.close()
 
